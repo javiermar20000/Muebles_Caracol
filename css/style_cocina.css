@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444444;
+    background-image: url(../img/interior.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(226, 11, 11, 0.507);
+}
+
+button {
+    background-color: rgb(255, 0, 0);
+    margin: 10px;
+    padding-top: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-color: white;
+    color: white;
+    font-size: 25px;
+}
+
+
+.cart-total-style {
+    font-size: 30px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente */
+    font-family: "Poppins", sans-serif; /* Familia de fuentes */
+    /* Puedes ajustar estos valores según tus preferencias */
+}
+
+.remove-from-cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .remove-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    background-color: white;
+    border: 1px solid #deb5b5;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .remove-list {
+    list-style: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  
+  .remove-list li {
+    margin-bottom: 5px;
+  }
+  
+  .remove-menu button {
+    background-color: #ff3333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .remove-menu button:hover {
+    background-color: #ff0000;
+  }
+
+  .floating-button {
+    position: fixed;
+    top: 160px;
+    left: -20px;
+    z-index: 1000;
+}
+
+.floating-button button {
+    background-color: #ff3333;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-menu {
+    display: none;
+    position: absolute;
+    font-weight: bold;
+    top: 50px;
+    left: 12px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-menu a {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.category-menu a:hover {
+    color: #ff3333;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 40px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 20px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .header h2::after {
+    content: "Precios referenciales sujetos a modificaciones ";
+    display: block;
+    font-size: 0.8rem;
+    color: #fe302f;
+    margin-top: 5px;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.05,1.05) rotate(0deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url(../productos/cocina1.jpeg) no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url(../productos/cocina2.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url(../productos/cocina3.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url(../productos/cocina4.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url(../productos/cocina5.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount {
+    position: absolute;
+    bottom: 5px;
+    right: 0px; /* Cambiado de left a right */
+    color: #ffffff;
+    background-color: #000000bd;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    color: #ffffff;
+    background-color: #ff0000b8;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #ff0000b8;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    left: 10px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 {
+    text-align: center;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1.6rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+}
+
+.imagen-central {
+    margin-bottom: 20px; /* Ajusta el espacio entre la imagen y el botón Volver según sea necesario */
+}
+
+.imagen-central img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 80px; /* Define la altura máxima que deseas */
+    width: auto; /* Ajusta automáticamente el ancho manteniendo la proporción */
+    height: auto; /* Ajusta automáticamente la altura manteniendo la proporción */
+}
+
+.button-link {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #ff3333; /* Cambia el color al pasar el cursor sobre el botón */
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 40%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Esto mantendrá la relación de aspecto */
+}
+
+/* Estilos para el botón de cierre ('x') */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .remove-menu {
+        display: none;
+        position: absolute;
+        top: 140px;
+        right: 80px;
+        background-color: white;
+        border: 1px solid #deb5b5;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+    .floating-button {
+        position: fixed;
+        top: 200px;
+        left: -24px;
+        z-index: 1000;
+    }
+    
+    .floating-button button {
+        background-color: #ff3333;
+        color: white;
+        font-size: 14px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .category-menu {
+        display: none;
+        position: absolute;
+        font-weight: bold;
+        top: 50px;
+        left: 16px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category-menu a {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para versión móvil */
+    .category-menu {
+      display: none;
+    }
+  
+    /* Otras reglas de estilo específicas para móviles */
+  }
+  
+  @media screen and (min-width: 769px) {
+    /* Estilos para versión de escritorio */
+    .category-menu {
+      display: block;
+    }
+  
+    /* Otras reglas de estilo específicas para escritorio */
+  }
+
+@media screen and (max-width: 500px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .section-products .single-product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-products .header {
+        text-align: center;
+    }
+
+    #cart-total {
+        margin-left: 0px; /* Ajusta el margen hacia la derecha según tus necesidades */
+    }
+
+    button {
+        margin-right: 0px; /* Ajusta el margen en dispositivos móviles según tus necesidades */
+        font-size: 18px;
+        margin-left: 0px;
+    }
+
+    .remove-menu {
+        display: none;
+        position: absolute;
+        top: 250px;
+        left: auto;
+        right: 40px;
+        background-color: white;
+        border: 1px solid #deb5b5;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        left: 40px;
+        font-size: 20px;
+    }
+
+    .floating-button {
+        position: fixed;
+        top: 320px;
+        right: 0;
+        left: -12px;
+        z-index: 1000;
+    }
+
+    .floating-button button {
+        background-color: #ff3333;
+        color: white;
+        font-size: 18px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .category-menu a {
+        font-size: 20px;
+    }
+
+    .section-products .single-product .part-2 .product-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-products .single-product .part-2 h4 {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    .section-products .single-product .part-1,
+    .section-products .single-product .part-2 {
+        width: 100%;
+    }
+
+    .section-products .single-product .part-1::before {
+        height: 300px; /* Ajusta la altura en dispositivos móviles según sea necesario */
+    }
+
+    .section-products .single-product .part-1 ul {
+        bottom: 10px;
+    }
+
+    .section-products .header h2 {
+        font-size: 3rem; /* Ajusta el tamaño de fuente para dispositivos móviles */
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: auto;
+    }
+    
+    .modal-content {
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        max-height: 90vh;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        max-height: 80%; /* Ajusta el máximo de altura */
+        margin-bottom: 20px; /* Añade un margen inferior para separar la imagen del contenido inferior */
+    }
+}

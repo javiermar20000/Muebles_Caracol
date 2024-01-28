@@ -1,0 +1,232 @@
+/* Estilos adicionales para mejorar el diseño */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinear los elementos hacia arriba */
+  min-height: 100vh; /* Cambiar a min-height para que el cuerpo se expanda si es necesario */
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%; /* Cambiar a ancho completo */
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Agregado para permitir desplazamiento vertical si es necesario */
+  margin-top: 30px;
+}
+
+.corner-image-container {
+  position: relative;
+}
+
+.corner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 250px; /* Ajusta el tamaño máximo de la imagen según tus preferencias */
+  width: auto;
+  border-radius: 8px;
+}
+
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.total-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.total-container h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.total-container p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.pay-button,
+.download-button {
+  background-color: rgb(255, 0, 0);
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-color: white;
+  color: white;
+  font-size: 25px;
+  float: left;
+}
+
+.total-info {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.payment-methods-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.payment-methods-container p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.payment-methods-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  max-width: 50ch;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  z-index: 1;
+}
+
+#modal h2 {
+  color: #000000; /* Cambia el color del encabezado según tus preferencias */
+  text-align: center;
+}
+
+#modal p {
+  color: #000000; /* Cambia el color del texto del modal según tus preferencias */
+}
+
+#btn-cerrar-modal {
+  background-color: rgb(255, 0, 0);
+  margin: 20px auto; /* Ajusta el margen superior e inferior del botón según tus preferencias */
+  padding: 10px 10px; /* Ajusta el padding del botón según tus preferencias */
+  border-radius: 10px;
+  border: 2px solid white; /* Ajusta el borde del botón según tus preferencias */
+  color: white;
+  font-size: 20px; /* Ajusta el tamaño del texto del botón según tus preferencias */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición al color de fondo */
+  display: block;
+}
+
+#btn-cerrar-modal:hover {
+  background-color: #ff3333; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+/* Agregar estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 500px) {
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .corner-image {
+    max-width: 80px;
+  }
+
+  .order-details-title {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .producto {
+    padding: 5px;
+  }
+
+  .total-container {
+    margin-top: 10px;
+  }
+
+  .total-container h2 {
+    font-size: 26px;
+  }
+
+  .total-container p {
+    font-size: 26px;
+  }
+
+  .pay-button,
+  .download-button {
+    font-size: 26px;
+  }
+
+  .total-info {
+    margin-top: 10px;
+  }
+
+  .payment-methods-container p {
+    font-size: 24px;
+  }
+
+  #modal {
+    width: 90%;
+    padding: 10px;
+  }
+
+  #modal h2 {
+    font-size: 26px;
+  }
+
+  #modal p {
+    font-size: 22px;
+  }
+
+  #btn-cerrar-modal {
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 8px 8px;
+  }
+}
