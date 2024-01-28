@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <title>Pago - Caracol</title>
+  <link rel="stylesheet" href="css/styles_pago.css">
+</head>
+<body>
+  <div class="container">
+    <div class="corner-image-container">
+      <img src="img/logo_caracol_color.png" alt="Logo Muebles Caracol" class="corner-image">
+    </div>
+    <h1>Detalles del Pedido</h1>
+    <div id="productos-container" class="productos-container">
+      <!-- Aquí se mostrarán los productos -->
+    </div>
+    <div class="total-container">
+        <button class="pay-button" id="btn-abrir-modal">Instrucciones para comprar</button>
+        <button class="download-button">Descargar PDF</button>
+      <div class="total-info">
+      <h2>Total a Pagar</h2>
+      <p id="total">0</p>
+      <h3>Sujeto a cambio (consultar)</h3>
+      </div>
+    </div>
+
+    <!-- Nuevo contenido -->
+    <div class="payment-methods-container">
+      <p>Si prefiere Formas de Pago en Presencial</p>
+      <img src="img/tarjetas_final.png" alt="Tarjetas de Crédito">
+    </div>
+
+  </div>
+  <dialog id="modal">
+    <h2>Instrucciones para comprar</h2>
+    <p>1°: Consultar stock y precio real del producto</p>
+    <p>- junto con PDF o foto del producto al</p>
+    <p>- Whatsapp: +569 9842 7241</p>
+    <p>2°: Depositar a la cuenta de:</p>
+    <p>- Marcelo Martínez Molina SPA</p>
+    <p>- RUT: 76.730.717-9</p>
+    <p>- Banco de Chile</p>
+    <p>- Cuenta Corriente: 0410882505</p>
+    <p>- e-mail: mueblescaracol@gmail.com</p>
+    <p>- Indicar en el mensaje el nombre del producto que se esta comprando.</p>
+    <button id="btn-cerrar-modal">Cerrar Ventana</button>
+  </dialog>
+  <script src="js/pagina_de_pago.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <title>Caracol - Dormitorio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="./css/style_dormitorio.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- Contenedor de la ventana emergente -->
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01">
+  </div>
+
+<section class="section-products">
+	<div class="container">
+		<div class="row justify-content-between align-items-start">
+			<div class="col-md-8 col-lg-6">
+				<div class="header text-left">
+					<h3>Productos Nuevos y Recientes</h3>
+					<h2>Dormitorio</h2>
+				</div>
+			</div>
+			<div class="col-md-4 col-lg-6 d-flex justify-content-end align-items-center">
+				<div id="cart-total" class="cart-total-style" style="margin-right: 20px;">$0</div>
+				<button onclick="realizarCompra()">Realizar Pedido</button>
+				<div class="remove-from-cart" style="margin-top: 0px;">
+					<button onclick="mostrarMenuQuitar()">Ver Carrito</button>
+					<div id="remove-menu" class="remove-menu">
+					  <ul id="remove-list" class="remove-list"></ul>
+					  <button onclick="quitarProductos()">Quitar Seleccionados / Salir</button>
+					</div>
+				  </div>
+			</div>
+			<div class="floating-button">
+				<button onclick="toggleCategoryMenu()">+</button>
+				<div id="category-menu" class="category-menu">
+					<a href="infantil.html" class="product-category-link">Infantil</a>
+					<a href="oficina.html" class="product-category-link">Oficina</a>
+					<a href="living.html" class="product-category-link">Living</a>
+					<a href="dormitorio.html" class="product-category-link">Dormitorio</a>
+					<a href="cocina.html" class="product-category-link">Cocina</a>
+					<a href="colchones.html" class="product-category-link">Colchones</a>
+					<a href="comedor.html" class="product-category-link">Comedor</a>
+					<a href="mesas.html" class="product-category-link">Racks-Mesas</a>
+				</div>
+			</div>
+		</div>
+				<div class="row">
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-1" class="single-product">
+						  <div class="part-1">
+							<span class="new">Nuevo</span>
+							<span class="discount">precio referencial</span>
+							<ul>
+								<li><a href="#" onclick="agregarProducto1()"><i class="fas fa-shopping-cart"></i></a></li>
+							  <li><a href="https://wa.me/?text=¡Mira esta increíble marquesa 1 plaza 1/2 oscura Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+							  <li><a href="#" onclick="showImage('productos/marquesa1.png')"><i class="fas fa-expand"></i></a></li>
+							</ul>
+						  </div>
+						  <div class="part-2">
+							<h3 class="product-title">Marquesa 1 y 1/2 plaza nogal</h3>
+							<!-- <h4 class="product-old-price">$149,990</h4> -->
+							<h4 class="product-price">$130,000</h4>
+						  </div>
+						</div>
+					  </div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-2" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto2()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble marquesa 1 plaza 1/2 madera con blanco Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/marquesa2.png')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Marquesa 1 y 1/2 plaza nogal y tapizada</h3>
+								<h4 class="product-price">$135,000</h4>
+							  </div>
+							</div>
+						  </div>
+						<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-3" class="single-product">
+						  <div class="part-1">
+							<span class="new">Nuevo</span>
+							<span class="discount">precio referencial</span>
+							<ul>
+								<li><a href="#" onclick="agregarProducto3()"><i class="fas fa-shopping-cart"></i></a></li>
+								<li><a href="https://wa.me/?text=¡Mira esta increíble marquesa 2 plazas cafe claro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+							  <li><a href="#" onclick="showImage('productos/marquesa3.png')"><i class="fas fa-expand"></i></a></li>
+							</ul>
+						  </div>
+						  <div class="part-2">
+							<h3 class="product-title">Marquesa 2 plazas natural</h3>
+							<h4 class="product-price">$150,000</h4>
+						  </div>
+						</div>
+					  </div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-4" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto4()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble marquesa 2 plazas blanco con cafe claro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/marquesa4.png')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Marquesa 2 plazas natural tapizada</h3>
+								<h4 class="product-price">$160,000</h4>
+							  </div>
+							</div>
+						  </div>
+						<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-5" class="single-product">
+						  <div class="part-1">
+							<span class="new">Nuevo</span>
+							<span class="discount">precio referencial</span>
+							<ul>
+								<li><a href="#" onclick="agregarProducto5()"><i class="fas fa-shopping-cart"></i></a></li>
+								<li><a href="https://wa.me/?text=¡Mira esta increíble Mueble de 2 compartimientos Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+							  <li><a href="#" onclick="showImage('productos/dor1.jpeg')"><i class="fas fa-expand"></i></a></li>
+							</ul>
+						  </div>
+						  <div class="part-2">
+							<h3 class="product-title">Closet 4 cuerpos bi-color</h3>
+							<h4 class="product-price">$195.000</h4>
+						  </div>
+						</div>
+					  </div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-6" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto6()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Mueble de 2 compartimientos negro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor2.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Closet 4 cuerpos bi-color oscuro</h3>
+								<h4 class="product-price">$195.000</h4>
+							  </div>
+							</div>
+						  </div>
+						<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-7" class="single-product">
+						  <div class="part-1">
+							<span class="new">Nuevo</span>
+							<span class="discount">precio referencial</span>
+							<ul>
+								<li><a href="#" onclick="agregarProducto7()"><i class="fas fa-shopping-cart"></i></a></li>
+								<li><a href="https://wa.me/?text=¡Mira esta increíble Mueble de 1 compartimiento pequeño color roble Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+							  <li><a href="#" onclick="showImage('productos/dor3.jpeg')"><i class="fas fa-expand"></i></a></li>
+							</ul>
+						  </div>
+						  <div class="part-2">
+							<h3 class="product-title">Closet 2 cuerpos nogal</h3>
+							<h4 class="product-price">$160.000</h4>
+						  </div>
+						</div>
+					  </div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-8" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto8()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Mueble de 1 compartimiento pequeño color madera oscuro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor4.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Closet de 2 cuerpos chocolate</h3>
+								<h4 class="product-price">$159.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-9" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto9()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Comoda madera color cafe claro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor5.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Comoda melamina 4 cajones</h3>
+								<h4 class="product-price">$109.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-10" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto10()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Comoda de madera color claro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor6.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Comoda melamina 6 cajones</h3>
+								<h4 class="product-price">$155.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-11" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto11()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Comoda dormitorio cafe claro Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor7.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Comoda nogal 6 cajones</h3>
+								<h4 class="product-price">$139.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-12" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto12()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Tocador Mujer dormitorio Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor8.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Tocador Mujer dormitorio</h3>
+								<h4 class="product-price">$159.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-13" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto13()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Velador de cama pequeño madera rojo Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor9.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Velador cerezo</h3>
+								<h4 class="product-price">$49.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-14" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto14()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Velador de cama pequeño madera oscura Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor10.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Velador chocolate</h3>
+								<h4 class="product-price">$60.000</h4>
+							  </div>
+							</div>
+						  </div>
+						  <!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+							<div id="product-15" class="single-product">
+							  <div class="part-1">
+								<span class="new">Nuevo</span>
+								<span class="discount">precio referencial</span>
+								<ul>
+									<li><a href="#" onclick="agregarProducto15()"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="https://wa.me/?text=¡Mira esta increíble Rack oscuro con multiples cajones Visita la página: https://mueblescaracol.cl/dormitorio.html" target="_blank"><i class="fas fa-heart"></i></a></li>
+								  <li><a href="#" onclick="showImage('productos/dor12.jpeg')"><i class="fas fa-expand"></i></a></li>
+								</ul>
+							  </div>
+							  <div class="part-2">
+								<h3 class="product-title">Comoda 8 cajones chocolate</h3>
+								<h4 class="product-price">$210.000</h4>
+							  </div>
+							</div>
+						  </div>
+				</div>
+		</div>
+		<div class="button-container">
+			<div class="imagen-central">
+				<img src="img/tarjetas_final.png" alt="Formas de Pago">
+			</div>
+			<a href="index.html" class="button-link">Volver</a>
+		</div>
+		<script src="js/mostrar_imagen_dormitorio.js"></script>
+</section>
+<!-- partial -->
+  
+</body>
+</html>
